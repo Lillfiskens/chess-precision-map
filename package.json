@@ -4,11 +4,17 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "copy-engine": "cp node_modules/stockfish/bin/stockfish-18-lite-single.* public/",
+    "dev": "npm run copy-engine && vite",
+    "build": "npm run copy-engine && vite build",
     "preview": "vite preview"
   },
   "devDependencies": {
     "vite": "^7.3.1"
+  },
+  "dependencies": {
+    "chess.js": "^1.4.0",
+    "d3": "^7.9.0",
+    "stockfish": "^18.0.5"
   }
 }
