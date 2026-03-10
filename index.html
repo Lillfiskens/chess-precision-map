@@ -2,12 +2,26 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>chess-precision-map</title>
+    <title>Chess Precision Map</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="loading-overlay">
+      <div class="loading-content">
+        <div class="spinner"></div>
+        <p>Loading Stockfish engine&hellip;</p>
+      </div>
+    </div>
+    <header id="app-header">
+      <h1>Chess Precision Map</h1>
+      <div id="progress-indicator"></div>
+      <div id="fen-controls"></div>
+    </header>
+    <main id="app-main">
+      <div id="tree-container"></div>
+      <aside id="detail-panel"></aside>
+    </main>
+    <div id="legend-container"></div>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
